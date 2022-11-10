@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de alumnos</title>
+</head>
+<body>
+
+    {% if tecnologia == "Python" %}  <!-- podemos meter for y condicionanles en los templates de usando --> 
+        <h1 style="color: green;">Curso de {{tecnologia}}</h1>
+    {% elif tecnologia == "react" %}
+        <h1 style="color: blue;"> Curso de {{tecnologia}}</h1>
+    {% else %}
+        <h1>Curso de {{tecnologia}}</h1>
+
+    {% endif %}  <!-- pero debemos cerrarlo con esta etiqueta -->
+
+    <p>Listado de alumnos </p>
+
+    <ul>
+        {% for alumno in listado_alumnos %} <!--- abrimos un for en el template-->
+            <li>{{alumno}}</li>
+
+
+
+        {% endfor %} <!--cerramos el for dentro del template--> 
+
+    </ul>
+
+
+</body>
+</html>
