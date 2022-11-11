@@ -2,12 +2,13 @@ from django.shortcuts import render
 from appcoder.models import Curso
 from django.http import HttpResponse
 
+
+
+
 # Create your views here.
 
 def inicio(request):
-
-
-    return HttpResponse("Estas en el inicio")
+    return render(request, "appcoder/index.html")
 
 def cursos(request):
 

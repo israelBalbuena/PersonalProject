@@ -21,12 +21,12 @@ from proyectocoder.view import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("saludo/", greeting),
-    path("login/", iniciar_sesion),
-    path("hoy/<nombre>/", dia_hoy),    # entre los simbolos de mas y menos podemos indicar parametros que le podemos pasar a un funcion establecida en view
-    path("año/<anios>/", edad),
-    path("inicio/",vista_plantilla2),
-    path("alumnos/", vista_listado_alumnos2),
+    # path("saludo/", greeting),
+    # path("login/", iniciar_sesion),
+    # path("hoy/<nombre>/", dia_hoy),    # entre los simbolos de mas y menos podemos indicar parametros que le podemos pasar a un funcion establecida en view
+    # path("año/<anios>/", edad),
+    # path("inicio/",vista_plantilla2),
+    # path("alumnos/", vista_listado_alumnos2),
     path("coder/", include("appcoder.urls"))
 
 ]
